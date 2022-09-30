@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="panel" style="width: 30%; display: inline-block; position: relative; "  >
+		<div class="panel-heading">
+			Input product detail information
+		</div>
+        <div style="width:100%;height:100%; position: absolute;">
+            <div style="flex:1;height: 100%;">
+                <div class="panel-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label>Product Name:</label>
+                            <input type="number" name="index" id="index" value="" hidden="true">
+                            <input class="form-control" type="text" name="product_name" id="product_name" placeholder="Enter product name">
+                        </div>
+                        <div class="form-group">
+                            <label>Manufacturer Name:</label>
+                            <select class="form-control" id="manuafaturer_name" onchange="changeManufaturer()">
+                                <option value="">-- Choose --</option>
+                            </select>
+                        </div>
+                        <br class="form-group">
+                            <label>Category Name:</label></br>
+                            <input type="text" id="category_name">
+                            </input>
+                        </div>
+                        <div class="form-group">
+                            <label>Price:</label>
+                            <input class="form-control" type="number" name="price" id="price" placeholder="Enter price" value="0" onkeyup="updateTotalPrice()">
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity:</label>
+                            <input class="form-control" type="text" name="quantity" id="quantity" placeholder="Enter quantity" value="0" onkeyup="updateTotalPrice()">
+                        </div>
+                        <div class="form-group">
+                            <label>Picture:</label>
+                            <input class="form-control" type="file" name="img" id="picture" value="0" >
+                        </div>
+                        <div class="form-group">
+                            <label>Total Price:</label>
+                            <input class="form-control" type="text" name="total_price" id="total_price" value="0" disabled="true">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success" type="reset" onclick="addProduct()">Add Produce</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <div style="flex:1;height: 100%; width: 70%; display: inline-block; position: absolute;">
+        <div class="panel">
+            <div class="panel-heading">
+                Product List
+            </div>
+            <div class="panel-body">
+                <table class="table" border="1">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Manufacture Name</th>
+                            <th>Category Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="result">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+        
+    
+    <script src="my.js" ></script>
+</body>
+</html>

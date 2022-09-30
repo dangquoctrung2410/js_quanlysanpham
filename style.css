@@ -1,0 +1,44 @@
+.panel {
+    width:100%;
+    /* margin: 0 auto; */
+    border: solid #4267b2 1px;
+}
+
+.panel-heading {
+    background-color: #4267b2;
+    padding: 10px;
+    color: white;
+}
+
+.panel-body {
+    margin: 20x;
+}
+.panel-body label {
+    font-weight: bold;
+}
+
+.form-group {
+    flex:1;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table tr {
+    border-bottom: solid blue 1px;
+}
+table,tr,td {
+    border-collapse: collapse;
+}
+input {
+    width: 95%;
+}
